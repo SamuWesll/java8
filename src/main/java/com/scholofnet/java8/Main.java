@@ -18,7 +18,7 @@ public class Main {
 
         List<String> l = strings.stream().filter(str -> str.startsWith("L")).collect(Collectors.toList());
 
-        l.forEach(System.out::println);
+        l.forEach(Person::say);
     }
 
 }
