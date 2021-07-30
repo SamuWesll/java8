@@ -19,6 +19,21 @@ public class Main {
         List<String> l = strings.stream().filter(str -> str.startsWith("L")).collect(Collectors.toList());
 
         l.forEach(Person::say);
+
+        // Java 7
+        MyInterface myInterfaceJavaSete = new MyInterface() {
+            @Override
+            public void print() {
+                System.out.println("Java 7 implementation = Function interface");
+            }
+        };
+        myInterfaceJavaSete.print();
+
+        //Java 8
+        MyInterface myInterfaceJavaOito = () -> {
+            System.out.println("Java 8 implementation = Function interface");
+        };
+        myInterfaceJavaOito.print();
     }
 
 }
